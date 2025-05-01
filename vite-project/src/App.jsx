@@ -77,7 +77,8 @@ const apiThumbnails = [
   {
     index: 10,
     duration: "7:53",
-    videoTitle: "How The World's Largest Cruise Ship Makes 30,000 Meals Every Day",
+    videoTitle:
+      "How The World's Largest Cruise Ship Makes 30,000 Meals Every Day",
     author: "Business Insider",
     view: "14M views . 1 year ago",
     id: "0903010",
@@ -85,7 +86,8 @@ const apiThumbnails = [
   {
     index: 11,
     duration: "4:10",
-    videoTitle: "Dubai's Crazy Underwater Train and Other Things #Only in Dubia",
+    videoTitle:
+      "Dubai's Crazy Underwater Train and Other Things #Only in Dubia",
     author: "Destination Tips",
     view: "3M views . 1 year ago",
     id: "0903011",
@@ -99,6 +101,33 @@ const apiThumbnails = [
     id: "0903012",
   },
 ];
+
+const apiSideIcons = [
+  {
+    icon: "home",
+    label: "Home"
+  },
+  {
+    icon: "explore",
+    label: "Explore"
+  },
+  {
+    icon: "subscriptions",
+    label: "Subscriptions"
+  },
+  {
+    icon: "originals",
+    label: "Originals"
+  },
+  {
+    icon: "youtube-music",
+    label: "Youtube Music"
+  },
+  {
+    icon: "library",
+    label: "Library"
+  }
+]
 
 function Thumbnails(props) {
   return (
@@ -135,7 +164,7 @@ function Thumbnails(props) {
 
 function GridVidArea() {
   return (
-    <div className="grid-container grid gap-y-[60px] gap-x-[20px] p-5">
+    <div className="grid-container grid gap-y-[60px] gap-x-[20px] p-5 pl-[92px]">
       {apiThumbnails.map(function (item) {
         return (
           <Thumbnails
@@ -162,10 +191,32 @@ function NavBar() {
   );
 }
 
+function SideIcons(props) {
+  return (
+    <div class="sideicons-div h-[75px] flex flex-col items-center justify-center cursor-pointer hover:bg-[#ebebeb]">
+      <img src={`./public/side-icons/${props.icon}.svg`} alt="home" className="size-6 mb-1" />
+      <p className="text-[10px]">{props.label}</p>
+    </div>
+  );
+}
+
+function SideBar() {
+  return (
+    <nav className="fixed top-14 bottom-0 left-0 w-[72px] z-10 text-center bg-white">
+      {apiSideIcons.map(function(item) {
+        return (
+          <SideIcons icon={item.icon} label={item.label} />
+        )
+      })}
+    </nav>
+  );
+}
+
 function App() {
   return (
     <>
       <NavBar />
+      <SideBar />
       <GridVidArea />
     </>
   );
