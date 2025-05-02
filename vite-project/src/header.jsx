@@ -4,41 +4,41 @@ function TopNav() {
   return (
     <header>
         
-        <div class="flex justify-between items-center fixed inset-x-0 top-0 h-[57px] py-8 z-100 bg-white border border-[#cccccc] ">
-            <div class="left-items header-flex">
-                <div class="sandwich header-icons"><img src="images/icons/hamburger-menu.svg" alt="hamburger-menu" /></div>
-                <div class="youtube-logo"><img src="images/icons/youtube-logo.svg" alt="youtube-logo" /></div>
+        <div className="flex justify-between items-center fixed inset-x-0 top-0 h-[57px] py-8 z-100 bg-white border border-[#cccccc] ">
+            <div className="left-items header-flex flex w-[130px] justify-between items-center ">
+                <div className="sandwich header-icons size-6 cursor-pointer"><img src="./public/top-icons/hamburger-menu.svg" alt="hamburger-menu" /></div>
+                <div className="youtube-logo w-[90px] h-5 "><img src="./public/top-icons/youtube-logo.svg" alt="youtube-logo" /></div>
             </div>
 
-            <div class="middle-items header-flex">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search" />
-                    <div class="search-icon">
-                        <img src="images/icons/search.svg" alt="search icon" />
-                        <div class="tooltip">Search</div>
+            <div className="middle-items header-flex flex w-[470px] shrink-2 my-2.5 ">
+                <div className="search-bar flex flex-1 border border-[#cccccc]">
+                    <input type="text" placeholder="Search" className="w-5 flex-1 h-10 px-[1px] py-0.5 border-none" />
+                    <div className="search-icon px-1 py-[15px] w-16 h-10 border-l border-[#cccccc] bg-[#f7f7f7]  ">
+                        <img src="./public/top-icons/search.svg" alt="search icon" className="size-8" />
+                        <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Search</div>
                     </div>
                 </div>
-                <div class="voice-search">
-                    <img src="images/icons/voice-search-icon.svg" alt="voice-search-icon" />
-                    <div class="tooltip">Search With Your Voice</div>
+                <div className="voice-search ml-2.5 size-10 p-2 rounded-full bg-[#f8f8f8] cursor-pointer group">
+                    <img src="./public/top-icons/voice-search-icon.svg" alt="voice-search-icon" className="size-6"/>
+                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Search With Your Voice</div>
                 </div>
             </div>
 
-            <div class="right-items header-flex">
-                <div class="video-upload header-icons">
-                    <img src="images/icons/upload.svg" alt="video-upload" />
-                    <div class="tooltip">Create</div>
+            <div className="right-items header-flex flex w-[182px] justify-center items-center ">
+                <div className="video-upload header-icons size-6 cursor-pointer">
+                    <img src="./public/top-icons/upload.svg" alt="video-upload" />
+                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Create</div>
                 </div>
-                <div class="apps-icon header-icons">
-                    <img src="images/icons/youtube-apps.svg" alt="youtube-apps" />
-                    <div class="tooltip">YouTube Apps</div>
+                <div className="apps-icon header-icons size-6 cursor-pointer">
+                    <img src="./public/top-icons/youtube-apps.svg" alt="youtube-apps" />
+                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">YouTube Apps</div>
                 </div>
-                <div class="notification header-icons">
-                    <img src="images/icons/notifications.svg" alt="notification icon" />
-                    <div class="red-notification">3</div>
-                    <div class="tooltip">Notifications</div>
+                <div className="notification header-icons size-6 cursor-pointer">
+                    <img src="./public/top-icons/notifications.svg" alt="notification icon" />
+                    <div className="red-notification">3</div>
+                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Notifications</div>
                 </div>
-                <div class="channel-profile"><img src="images/profile-pics/my-channel.jpeg" alt="my channel profile" /></div>
+                <div className="channel-profile size-8"><img src="./public/profilePics/my-channel.jpeg" alt="my channel profile" /></div>
             </div>
         </div>
     </header>
