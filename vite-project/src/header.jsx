@@ -1,15 +1,13 @@
 import "./App.css";
 
-function topNav() {
-    return(
-        <>
-        </>
-    );
+function TopNav() {
+  return (
+    <>
+      <header className="bg-white p-2 font-bold text-lg text-red-600">
+        Youtube
+      </header>
+    </>
+  );
 }
 
-
-
-
-
-
-export default topNav;
+export default TopNav;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import topNav from "./header";
+import TopNav from "./header";
 
 const apiThumbnails = [
   {
@@ -184,13 +184,7 @@ function GridVidArea() {
   );
 }
 
-function NavBar() {
-  return (
-    <header className="bg-white p-2 font-bold text-lg text-red-600">
-      Youtube
-    </header>
-  );
-}
+
 
 function SideIcons(props) {
   return (
@@ -216,7 +210,7 @@ function SideBar() {
 function App() {
   return (
     <>
-      <NavBar />
+      <TopNav />
       <SideBar />
       <GridVidArea />
     </>
