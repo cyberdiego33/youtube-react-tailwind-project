@@ -13,12 +13,12 @@ function TopNav() {
             <div className="middle-items header-flex flex w-[470px] shrink-2 my-2.5 ">
                 <div className="search-bar flex flex-1 border border-[#cccccc]">
                     <input type="text" placeholder="Search" className="w-5 flex-1 h-10 px-[1px] py-0.5 border-none" />
-                    <div className="search-icon px-1 py-[15px] w-16 h-10 border-l border-[#cccccc] bg-[#f7f7f7]  ">
+                    <div className="search-icon px-1 py-[15px] w-16 h-10 border-l border-[#cccccc] bg-[#f7f7f7] group ">
                         <img src="./public/top-icons/search.svg" alt="search icon" className="size-8" />
                         <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Search</div>
                     </div>
                 </div>
-                <div className="voice-search ml-2.5 size-10 p-2 rounded-full bg-[#f8f8f8] cursor-pointer group">
+                <div className="voice-search ml-2.5 size-10 p-2 rounded-full bg-[#f8f8f8] cursor-pointer group ">
                     <img src="./public/top-icons/voice-search-icon.svg" alt="voice-search-icon" className="size-6"/>
                     <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Search With Your Voice</div>
                 </div>
