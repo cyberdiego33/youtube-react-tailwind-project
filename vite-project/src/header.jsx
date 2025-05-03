@@ -25,13 +25,13 @@ function TopNav() {
             </div>
 
             <div className="right-items header-flex flex w-[182px] justify-center items-center ">
-                <div className="video-upload header-icons size-6 cursor-pointer">
+                <div className="video-upload header-icons size-6 cursor-pointer group ">
                     <img src="./public/top-icons/upload.svg" alt="video-upload" />
-                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Create</div>
+                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-1 whitespace-nowrap">Create</div>
                 </div>
-                <div className="apps-icon header-icons size-6 cursor-pointer">
+                <div className="apps-icon header-icons size-6 cursor-pointer group">
                     <img src="./public/top-icons/youtube-apps.svg" alt="youtube-apps" />
-                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">YouTube Apps</div>
+                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-1 whitespace-nowrap">YouTube Apps</div>
                 </div>
                 <div className="notification header-icons size-6 cursor-pointer">
                     <img src="./public/top-icons/notifications.svg" alt="notification icon" />
