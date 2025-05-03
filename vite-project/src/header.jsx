@@ -15,28 +15,28 @@ function TopNav() {
                     <input type="text" placeholder="Search" className="w-5 flex-1 h-10 px-[1px] py-0.5 border-none" />
                     <div className="search-icon px-1 py-[15px] w-16 h-10 border-l border-[#cccccc] bg-[#f7f7f7] group ">
                         <img src="./public/top-icons/search.svg" alt="search icon" className="size-8" />
-                        <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Search</div>
+                        <div className="tooltip bg-[#606060e6] absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Search</div>
                     </div>
                 </div>
                 <div className="voice-search ml-2.5 size-10 p-2 rounded-full bg-[#f8f8f8] cursor-pointer group ">
                     <img src="./public/top-icons/voice-search-icon.svg" alt="voice-search-icon" className="size-6"/>
-                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Search With Your Voice</div>
+                    <div className="tooltip bg-[#606060e6] absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Search With Your Voice</div>
                 </div>
             </div>
 
             <div className="right-items header-flex flex w-[182px] justify-center items-center ">
                 <div className="video-upload header-icons size-6 cursor-pointer group ">
                     <img src="./public/top-icons/upload.svg" alt="video-upload" />
-                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-1 whitespace-nowrap">Create</div>
+                    <div className="tooltip bg-[#606060e6] absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-1 whitespace-nowrap">Create</div>
                 </div>
                 <div className="apps-icon header-icons size-6 cursor-pointer group">
                     <img src="./public/top-icons/youtube-apps.svg" alt="youtube-apps" />
-                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-1 whitespace-nowrap">YouTube Apps</div>
+                    <div className="tooltip bg-[#606060e6] absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-1 whitespace-nowrap">YouTube Apps</div>
                 </div>
                 <div className="notification header-icons size-6 cursor-pointer">
                     <img src="./public/top-icons/notifications.svg" alt="notification icon" />
                     <div className="red-notification">3</div>
-                    <div className="tooltip absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Notifications</div>
+                    <div className="tooltip bg-[#606060e6] absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">Notifications</div>
                 </div>
                 <div className="channel-profile size-8"><img src="./public/profilePics/my-channel.jpeg" alt="my channel profile" /></div>
             </div>
