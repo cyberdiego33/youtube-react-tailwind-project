@@ -106,35 +106,39 @@ const apiThumbnails = [
 const apiSideIcons = [
   {
     icon: "home",
-    label: "Home"
+    label: "Home",
   },
   {
     icon: "explore",
-    label: "Explore"
+    label: "Explore",
   },
   {
     icon: "subscriptions",
-    label: "Subscriptions"
+    label: "Subscriptions",
   },
   {
     icon: "originals",
-    label: "Originals"
+    label: "Originals",
   },
   {
     icon: "youtube-music",
-    label: "Youtube Music"
+    label: "Youtube Music",
   },
   {
     icon: "library",
-    label: "Library"
-  }
-]
+    label: "Library",
+  },
+];
 
 function Thumbnails(props) {
   return (
     <div>
       <div className="relative cursor-pointer">
-        <img src={props.thumbimage} alt={`thumbnail-pics-${props.index}`} />
+        <img
+          src={props.thumbimage}
+          alt={`thumbnail-pics-${props.index}`}
+          className="rounded-lg"
+        />
         <div className="w-fit p-[3px] text-white bg-black absolute right-1.5 bottom-2.5">
           {props.duration}
         </div>
@@ -152,11 +156,11 @@ function Thumbnails(props) {
         </div>
 
         <div className="leading-[1.5]">
-          <div className="font-medium leading-[1.2] cursor-pointer mb-2.5">
+          <div className="font-semibold leading-[1.2] cursor-pointer mb-2.5">
             {props.vidTitle}
           </div>
-          <p className="text-[12px]">{props.youtuber}</p>
-          <p className="text-[12px]">{props.views}</p>
+          <p className="text-[12px] text-[#606060]">{props.youtuber}</p>
+          <p className="text-[12px] text-[#606060]">{props.views}</p>
         </div>
       </div>
     </div>
@@ -165,7 +169,7 @@ function Thumbnails(props) {
 
 function GridVidArea() {
   return (
-    <div className="grid-container grid gap-y-[60px] gap-x-[20px] p-5 pl-[92px]">
+    <div className="grid-container grid gap-y-[60px] gap-x-[20px] p-5 pt-16 pl-[92px]">
       {apiThumbnails.map(function (item) {
         return (
           <Thumbnails
@@ -184,12 +188,14 @@ function GridVidArea() {
   );
 }
 
-
-
 function SideIcons(props) {
   return (
     <div class="sideicons-div h-[75px] flex flex-col items-center justify-center cursor-pointer hover:bg-[#ebebeb]">
-      <img src={`./public/side-icons/${props.icon}.svg`} alt="home" className="size-6 mb-1" />
+      <img
+        src={`./public/side-icons/${props.icon}.svg`}
+        alt="home"
+        className="size-6 mb-1"
+      />
       <p className="text-[10px]">{props.label}</p>
     </div>
   );
@@ -198,10 +204,8 @@ function SideIcons(props) {
 function SideBar() {
   return (
     <nav className="fixed top-14 bottom-0 left-0 w-[72px] z-10 text-center bg-white">
-      {apiSideIcons.map(function(item) {
-        return (
-          <SideIcons icon={item.icon} label={item.label} />
-        )
+      {apiSideIcons.map(function (item) {
+        return <SideIcons icon={item.icon} label={item.label} />;
       })}
     </nav>
   );
