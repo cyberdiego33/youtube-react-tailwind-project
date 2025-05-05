@@ -184,23 +184,23 @@ const apiSideIcons = [
 
 function BottomNav() {
   return (
-    <nav className="[@media(max-width:450px)]:flex  items-center fixed bottom-0 left-0 right-0 hidden z-20 justify-between h-[50px] bg-white border-t border-[#cccccc]">
-      <div className="w-[61px] grid justify-center">
+    <nav className="[@media(max-width:450px)]:flex  items-center fixed bottom-0 left-0 right-0 hidden z-20 justify-between h-[50px] bg-white px-6 border-t border-[#cccccc]">
+      <div className="w-fit grid justify-center">
         <img src={home} alt="home" className="size-6 mb-0.5 mx-auto" />
         <p className="text-[10px]">home</p>
       </div>
-      <div className="w-[61px] grid justify-center">
+      <div className="w-fit grid justify-center">
         <img src={home} alt="home" className="size-6 mb-0.5 mx-auto" />
         <p className="text-[10px]">Shorts</p>
       </div>
       <div className=" grid justify-center">
         <p className="text-[40px] h-[30px] grid place-content-center rounded-full font-light p-1 bg-[#cccccc]">+</p>
       </div>
-      <div className="w-[61px] grid justify-center">
+      <div className="w-fit grid justify-center">
         <img src={subscriptions} alt="home" className="size-6 mb-0.5 mx-auto " />
         <p className="text-[10px]">Subscriptions</p>
       </div>
-      <div className="w-[61px] grid justify-center">
+      <div className="w-fit grid justify-center">
         <img src={home} alt="home" className="size-6 mb-0.5 mx-auto" />
         <p className="text-[10px] text-center">You</p>
       </div>
