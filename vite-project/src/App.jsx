@@ -1,10 +1,23 @@
 import { useState } from "react";
 import "./App.css";
 import TopNav from "./header";
+import thumbnail1 from './assets/thumbnails/thumbnail-1.webp';
+import thumbnail2 from './assets/thumbnails/thumbnail-2.webp';
+import thumbnail3 from './assets/thumbnails/thumbnail-3.webp';
+import thumbnail4 from './assets/thumbnails/thumbnail-4.webp';
+import thumbnail5 from './assets/thumbnails/thumbnail-5.webp';
+import thumbnail6 from './assets/thumbnails/thumbnail-6.webp';
+import thumbnail7 from './assets/thumbnails/thumbnail-7.webp';
+import thumbnail8 from './assets/thumbnails/thumbnail-8.webp';
+import thumbnail9 from './assets/thumbnails/thumbnail-9.webp';
+import thumbnail10 from './assets/thumbnails/thumbnail-10.webp';
+import thumbnail11 from './assets/thumbnails/thumbnail-11.webp';
+import thumbnail12 from './assets/thumbnails/thumbnail-12.webp';
 
 const apiThumbnails = [
   {
     index: 1,
+    thumbnail: thumbnail1,
     duration: "14:20",
     videoTitle: "Talking Tech and AI with Google CEO Sundar Pichai!",
     author: "Marques Brownlee",
@@ -13,6 +26,7 @@ const apiThumbnails = [
   },
   {
     index: 2,
+    thumbnail: thumbnail2,
     duration: "14:20",
     videoTitle: "Try Not To Laugh Challenge",
     author: "Marques Brownlee",
@@ -21,6 +35,7 @@ const apiThumbnails = [
   },
   {
     index: 3,
+    thumbnail: thumbnail3,
     duration: "8:22",
     videoTitle: "Crazy Tik Tok Taken Moments Before DISASTER",
     author: "SSSniperWolf",
@@ -29,6 +44,7 @@ const apiThumbnails = [
   },
   {
     index: 4,
+    thumbnail: thumbnail4,
     duration: "22:09",
     videoTitle: "Simple Mathematics That You Can't Solve",
     author: "Veritasium",
@@ -37,6 +53,7 @@ const apiThumbnails = [
   },
   {
     index: 5,
+    thumbnail: thumbnail5,
     duration: "8:22",
     videoTitle: "Kadane's Algorithm to Maximum Sum Subarray Problem",
     author: "CS Dojo",
@@ -45,6 +62,7 @@ const apiThumbnails = [
   },
   {
     index: 6,
+    thumbnail: thumbnail6,
     duration: "19:59",
     videoTitle: "Anything You Can Fit In The Circle I'll Pay For",
     author: "MrBeast",
@@ -53,6 +71,7 @@ const apiThumbnails = [
   },
   {
     index: 7,
+    thumbnail: thumbnail7,
     duration: "10:13",
     videoTitle: "Why Planes Don't Fly Over Tibet",
     author: "RealLofeLore",
@@ -61,6 +80,7 @@ const apiThumbnails = [
   },
   {
     index: 8,
+    thumbnail: thumbnail8,
     duration: "7:12",
     videoTitle: "Inside The World's Biggest Passenger Plane",
     author: "Tech Vision",
@@ -69,6 +89,7 @@ const apiThumbnails = [
   },
   {
     index: 9,
+    thumbnail: thumbnail9,
     duration: "13:17",
     videoTitle: "The Secret to Super Human STRENGHT",
     author: "ThenX",
@@ -77,6 +98,7 @@ const apiThumbnails = [
   },
   {
     index: 10,
+    thumbnail: thumbnail10,
     duration: "7:53",
     videoTitle:
       "How The World's Largest Cruise Ship Makes 30,000 Meals Every Day",
@@ -86,6 +108,7 @@ const apiThumbnails = [
   },
   {
     index: 11,
+    thumbnail: thumbnail11,
     duration: "4:10",
     videoTitle:
       "Dubai's Crazy Underwater Train and Other Things #Only in Dubia",
@@ -95,6 +118,7 @@ const apiThumbnails = [
   },
   {
     index: 12,
+    thumbnail: thumbnail12,
     duration: "4:51",
     videoTitle: "What would happen if you didn't drink water? Mia Nacamulli",
     author: "TED-ED",
@@ -173,7 +197,7 @@ function GridVidArea() {
       {apiThumbnails.map(function (item) {
         return (
           <Thumbnails
-            thumbimage={`./public/thumbnails/thumbnail-${item.index}.webp`}
+            thumbimage={item.thumbnail}
             index={item.index}
             duration={item.duration}
             profilePic={`./public/profilePics/channel-${item.index}.jpeg`}
