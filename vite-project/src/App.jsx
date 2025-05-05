@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import TopNav from "./header";
 import apiThumbnails from "./ApiImages";
-import { apiSideIcons } from "./ApiImages";
+import { apiSideIcons, BottomNav } from "./ApiImages";
 
 function Thumbnails(props) {
   return (
@@ -43,7 +43,7 @@ function Thumbnails(props) {
 
 function GridVidArea() {
   return (
-    <div className="grid-container grid gap-y-[60px] gap-x-[20px] p-5 pt-16 pl-[92px]">
+    <div className="grid-container grid gap-y-[60px] gap-x-[20px] p-5 pt-16 pl-[92px] [@media(max-width:450px)]:pl-5">
       {apiThumbnails.map(function (item) {
         return (
           <Thumbnails
@@ -65,11 +65,7 @@ function GridVidArea() {
 function SideIcons(props) {
   return (
     <div class="sideicons-div h-[75px] flex flex-col items-center justify-center cursor-pointer hover:bg-[#ebebeb]">
-      <img
-        src={props.icon}
-        alt="home"
-        className="size-6 mb-1"
-      />
+      <img src={props.icon} alt="home" className="size-6 mb-1" />
       <p className="text-[10px]">{props.label}</p>
     </div>
   );
@@ -77,7 +73,7 @@ function SideIcons(props) {
 
 function SideBar() {
   return (
-    <nav className="fixed top-14 bottom-0 left-0 w-[72px] z-10 text-center bg-white">
+    <nav className=" fixed top-14 bottom-0 left-0 w-[72px] z-10 text-center bg-white [@media(max-width:450px)]:hidden">
       {apiSideIcons.map(function (item) {
         return <SideIcons icon={item.icon} label={item.label} />;
       })}
@@ -91,6 +87,7 @@ function App() {
       <TopNav />
       <SideBar />
       <GridVidArea />
+      <BottomNav />
     </>
   );
 }

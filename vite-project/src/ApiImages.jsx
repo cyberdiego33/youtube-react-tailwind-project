@@ -1,34 +1,34 @@
-import React from 'react'
-import thumbnail1 from './assets/thumbnails/thumbnail-1.webp';
-import thumbnail2 from './assets/thumbnails/thumbnail-2.webp';
-import thumbnail3 from './assets/thumbnails/thumbnail-3.webp';
-import thumbnail4 from './assets/thumbnails/thumbnail-4.webp';
-import thumbnail5 from './assets/thumbnails/thumbnail-5.webp';
-import thumbnail6 from './assets/thumbnails/thumbnail-6.webp';
-import thumbnail7 from './assets/thumbnails/thumbnail-7.webp';
-import thumbnail8 from './assets/thumbnails/thumbnail-8.webp';
-import thumbnail9 from './assets/thumbnails/thumbnail-9.webp';
-import thumbnail10 from './assets/thumbnails/thumbnail-10.webp';
-import thumbnail11 from './assets/thumbnails/thumbnail-11.webp';
-import thumbnail12 from './assets/thumbnails/thumbnail-12.webp';
-import profile1 from './assets/profilePics/channel-1.jpeg';
-import profile2 from './assets/profilePics/channel-2.jpeg';
-import profile3 from './assets/profilePics/channel-3.jpeg';
-import profile4 from './assets/profilePics/channel-4.jpeg';
-import profile5 from './assets/profilePics/channel-5.jpeg';
-import profile6 from './assets/profilePics/channel-6.jpeg';
-import profile7 from './assets/profilePics/channel-7.jpeg';
-import profile8 from './assets/profilePics/channel-8.jpeg';
-import profile9 from './assets/profilePics/channel-9.jpeg';
-import profile10 from './assets/profilePics/channel-10.jpeg';
-import profile11 from './assets/profilePics/channel-11.jpeg';
-import profile12 from './assets/profilePics/channel-12.jpeg';
-import explore from './assets/sideIcons/explore.svg';
-import home from './assets/sideIcons/home.svg';
-import subscriptions from './assets/sideIcons/subscriptions.svg';
-import library from './assets/sideIcons/library.svg';
-import originals from './assets/sideIcons/originals.svg';
-import youtubeMusic from './assets/sideIcons/youtube-music.svg';
+import React from "react";
+import thumbnail1 from "./assets/thumbnails/thumbnail-1.webp";
+import thumbnail2 from "./assets/thumbnails/thumbnail-2.webp";
+import thumbnail3 from "./assets/thumbnails/thumbnail-3.webp";
+import thumbnail4 from "./assets/thumbnails/thumbnail-4.webp";
+import thumbnail5 from "./assets/thumbnails/thumbnail-5.webp";
+import thumbnail6 from "./assets/thumbnails/thumbnail-6.webp";
+import thumbnail7 from "./assets/thumbnails/thumbnail-7.webp";
+import thumbnail8 from "./assets/thumbnails/thumbnail-8.webp";
+import thumbnail9 from "./assets/thumbnails/thumbnail-9.webp";
+import thumbnail10 from "./assets/thumbnails/thumbnail-10.webp";
+import thumbnail11 from "./assets/thumbnails/thumbnail-11.webp";
+import thumbnail12 from "./assets/thumbnails/thumbnail-12.webp";
+import profile1 from "./assets/profilePics/channel-1.jpeg";
+import profile2 from "./assets/profilePics/channel-2.jpeg";
+import profile3 from "./assets/profilePics/channel-3.jpeg";
+import profile4 from "./assets/profilePics/channel-4.jpeg";
+import profile5 from "./assets/profilePics/channel-5.jpeg";
+import profile6 from "./assets/profilePics/channel-6.jpeg";
+import profile7 from "./assets/profilePics/channel-7.jpeg";
+import profile8 from "./assets/profilePics/channel-8.jpeg";
+import profile9 from "./assets/profilePics/channel-9.jpeg";
+import profile10 from "./assets/profilePics/channel-10.jpeg";
+import profile11 from "./assets/profilePics/channel-11.jpeg";
+import profile12 from "./assets/profilePics/channel-12.jpeg";
+import explore from "./assets/sideIcons/explore.svg";
+import home from "./assets/sideIcons/home.svg";
+import subscriptions from "./assets/sideIcons/subscriptions.svg";
+import library from "./assets/sideIcons/library.svg";
+import originals from "./assets/sideIcons/originals.svg";
+import youtubeMusic from "./assets/sideIcons/youtube-music.svg";
 
 const apiThumbnails = [
   {
@@ -182,5 +182,31 @@ const apiSideIcons = [
   },
 ];
 
+function BottomNav() {
+  return (
+    <nav className="[@media(max-width:450px)]:flex  items-center fixed bottom-0 left-0 right-0 hidden z-20 justify-between h-[50px] bg-white border-t border-[#cccccc]">
+      <div className="w-[61px] grid justify-center">
+        <img src={home} alt="home" className="size-6 mb-0.5 mx-auto" />
+        <p className="text-[10px]">home</p>
+      </div>
+      <div className="w-[61px] grid justify-center">
+        <img src={home} alt="home" className="size-6 mb-0.5 mx-auto" />
+        <p className="text-[10px]">Shorts</p>
+      </div>
+      <div className=" grid justify-center">
+        <p className="text-[40px] h-[30px] grid place-content-center rounded-full font-light p-1 bg-[#cccccc]">+</p>
+      </div>
+      <div className="w-[61px] grid justify-center">
+        <img src={subscriptions} alt="home" className="size-6 mb-0.5 mx-auto " />
+        <p className="text-[10px]">Subscriptions</p>
+      </div>
+      <div className="w-[61px] grid justify-center">
+        <img src={home} alt="home" className="size-6 mb-0.5 mx-auto" />
+        <p className="text-[10px] text-center">You</p>
+      </div>
+    </nav>
+  );
+}
+
 export default apiThumbnails;
-export {apiSideIcons};
+export { apiSideIcons, BottomNav };
