@@ -6,18 +6,16 @@ import upload from "./assets/topIcons/upload.svg";
 import voiceSearch from "./assets/topIcons/voice-search-icon.svg";
 import youtubeApps from "./assets/topIcons/youtube-apps.svg";
 import youtubeLogo from "./assets/topIcons/youtube-logo.svg";
-import myChannel from './assets/profilePics/my-channel.jpeg';
+import myChannel from "./assets/profilePics/my-channel.jpeg";
+import linked from "./assets/topIcons/smart-tv.png"
 
 function TopNav() {
   return (
     <header className="">
-      <div className="flex justify-between items-center fixed inset-x-0 top-0 h-[57px] px-6 z-100 bg-white ">
+      <div className="flex [@media(max-width:450px)]:hidden justify-between items-center fixed inset-x-0 top-0 h-[57px] px-6 z-100 bg-white ">
         <div className=" flex w-[130px] justify-between items-center ">
           <div className=" size-6 cursor-pointer">
-            <img
-              src={hambuger}
-              alt="hamburger-menu"
-            />
+            <img src={hambuger} alt="hamburger-menu" />
           </div>
           <div className="w-[90px] h-5 ">
             <img src={youtubeLogo} alt="youtube-logo" />
@@ -32,22 +30,14 @@ function TopNav() {
               className="w-5 flex-1 h-10 px-[1px] py-0.5 border-none"
             />
             <div className=" px-1 py-[15px] w-16 h-10 border-l border-[#cccccc] bg-[#f7f7f7] rounded-r-full flex justify-center items-center group ">
-              <img
-                src={search}
-                alt="search icon"
-                className="size-8"
-              />
+              <img src={search} alt="search icon" className="size-8" />
               <div className=" -bottom-[30px] bg-[#606060e6] absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">
                 Search
               </div>
             </div>
           </div>
           <div className=" ml-2.5 size-10 p-2 rounded-full bg-[#f8f8f8] cursor-pointer flex justify-center group ">
-            <img
-              src={voiceSearch}
-              alt="voice-search-icon"
-              className="size-6"
-            />
+            <img src={voiceSearch} alt="voice-search-icon" className="size-6" />
             <div className=" -bottom-[30px] bg-[#606060e6] absolute text-white p-2 pointer-events-none rounded-[3px] text-[12px] transition-opacity ease-in-out opacity-0 group-hover:opacity-[1] whitespace-nowrap">
               Search With Your Voice
             </div>
@@ -68,10 +58,7 @@ function TopNav() {
             </div>
           </div>
           <div className=" relative size-6 cursor-pointer flex justify-center group">
-            <img
-              src={notification}
-              alt="notification icon"
-            />
+            <img src={notification} alt="notification icon" />
             <div className="red-notification absolute top-[-3px] right-[-4px] text-[10px] text-white rounded-full py-[1px] px-[5px] bg-[#b31313]  ">
               3
             </div>
@@ -80,10 +67,30 @@ function TopNav() {
             </div>
           </div>
           <div className=" size-8">
-            <img
-              src={myChannel}
-              alt="my channel profile"
-            />
+            <img src={myChannel} alt="my channel profile" />
+          </div>
+        </div>
+      </div>
+
+      <div className="hidden [@media(max-width:450px)]:flex justify-between items-center fixed inset-x-0 top-0 h-[57px] px-4 z-100 bg-white ">
+        <div className="w-[90px] h-5 ">
+          <img src={youtubeLogo} alt="youtube-logo" />
+        </div>
+
+        <div className="flex items-center space-x-4">
+        <div>
+            <img src={linked} alt="search icon" className="size-7" />
+          </div>
+
+          <div className=" relative size-6 cursor-pointer flex justify-center group">
+            <img src={notification} alt="notification icon" />
+            <div className="red-notification absolute top-[-3px] right-[-4px] text-[10px] text-white rounded-full py-[1px] px-[5px] bg-[#b31313]  ">
+              3
+            </div>
+          </div>
+
+          <div>
+            <img src={search} alt="search icon" className="size-7" />
           </div>
         </div>
       </div>

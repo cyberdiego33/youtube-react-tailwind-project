@@ -29,6 +29,8 @@ import subscriptions from "./assets/sideIcons/subscriptions.svg";
 import library from "./assets/sideIcons/library.svg";
 import originals from "./assets/sideIcons/originals.svg";
 import youtubeMusic from "./assets/sideIcons/youtube-music.svg";
+import youtubeShorts from "./assets/sideIcons/youtube-shorts.svg";
+
 
 const apiThumbnails = [
   {
@@ -190,7 +192,7 @@ function BottomNav() {
         <p className="text-[10px]">home</p>
       </div>
       <div className="w-fit grid justify-center">
-        <img src={home} alt="home" className="size-6 mb-0.5 mx-auto" />
+        <img src={youtubeShorts} alt="home" className="size-6 mb-0.5 mx-auto" />
         <p className="text-[10px]">Shorts</p>
       </div>
       <div className=" grid justify-center">
