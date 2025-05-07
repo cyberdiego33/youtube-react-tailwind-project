@@ -203,7 +203,7 @@ function BottomNav() {
         <p className="text-[10px]">Subscriptions</p>
       </div>
       <div className="w-fit grid justify-center">
-        <img src={home} alt="home" className="size-6 mb-0.5 mx-auto" />
+        <div className="text-center rounded-full text-white bg-cyan-500 size-6">I</div>
         <p className="text-[10px] text-center">You</p>
       </div>
     </nav>
